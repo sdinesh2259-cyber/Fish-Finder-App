@@ -3,162 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DM Marine GPS - Poster</title>
+  <title>DM Marine GPS Poster</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
     body {
-      min-height: 100vh;
+      background: #020b14;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #021B38 0%, #004e92 50%, #000428 100%);
-      padding: 15px;
+      min-height: 100vh;
+      padding: 10px;
     }
-    .poster-card {
+    
+    /* Instagram Story Ratio (9:16) Card */
+    .story-card {
       width: 100%;
-      max-width: 440px;
-      background: linear-gradient(165deg, rgba(8, 35, 68, 0.95), rgba(2, 14, 33, 0.98));
+      max-width: 420px;
+      background: radial-gradient(circle at top right, #003366, #020b14 70%);
       border: 2px solid #00ffcc;
       border-radius: 20px;
-      padding: 20px;
-      color: #fff;
-      box-shadow: 0 15px 35px rgba(0, 255, 204, 0.25), 0 0 15px rgba(0, 0, 0, 0.8);
+      padding: 24px 18px;
+      color: #ffffff;
+      box-shadow: 0 0 30px rgba(0, 255, 204, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.8);
       position: relative;
       overflow: hidden;
     }
-    .poster-card::before {
-      content: '🌊';
-      position: absolute;
-      top: -20px; right: -20px;
-      font-size: 130px;
-      opacity: 0.08;
-      pointer-events: none;
-    }
-    .header { text-align: center; margin-bottom: 15px; }
-    .header h1 {
-      font-size: 26px;
-      color: #00ffcc;
-      text-shadow: 0 0 12px rgba(0, 255, 204, 0.6);
+
+    .badge-top {
+      background: #e63946;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
       letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 8px rgba(230,57,70,0.6);
+      margin-bottom: 12px;
     }
-    .header p {
+
+    .main-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: #00ffcc;
+      text-shadow: 0 0 12px rgba(0,255,204,0.6);
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
       font-size: 13px;
       color: #ffcc00;
-      font-weight: 600;
-      margin-top: 3px;
-    }
-    .badge-offer {
-      background: linear-gradient(90deg, #ff0055, #ff5500);
-      color: white;
-      text-align: center;
-      padding: 6px 10px;
-      border-radius: 25px;
-      font-size: 11.5px;
       font-weight: bold;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 10px rgba(255, 0, 85, 0.4);
+      margin-bottom: 16px;
     }
+
+    .offline-tag {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px dashed #ff0055;
+      color: #ff4d6d;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
     .feature-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 15px;
+      gap: 8px;
+      margin-bottom: 16px;
     }
-    .feature-item {
-      background: rgba(0, 255, 204, 0.06);
-      border: 1px solid rgba(0, 255, 204, 0.25);
-      border-radius: 12px;
-      padding: 10px 8px;
-      text-align: center;
-    }
-    .feature-item .icon { font-size: 22px; margin-bottom: 4px; }
-    .feature-item .title { font-size: 12px; font-weight: bold; color: #ffcc00; margin-bottom: 2px; }
-    .feature-item .desc { font-size: 9.5px; color: #d0e8ff; line-height: 1.3; }
 
-    .link-box {
-      background: #011222;
-      border: 1.5px dashed #00ffcc;
+    .feature-box {
+      background: rgba(4, 21, 39, 0.85);
+      border: 1px solid #1a3a5a;
+      padding: 8px 10px;
       border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    .link-box .label { font-size: 11px; color: #aaa; margin-bottom: 3px; }
-    .link-box .url { font-size: 12px; font-weight: bold; color: #00ffcc; word-break: break-all; }
-
-    .steps-box {
-      background: rgba(255, 255, 255, 0.04);
-      border-radius: 10px;
-      padding: 10px;
       font-size: 11px;
-      line-height: 1.5;
-      color: #e0e0e0;
-      margin-bottom: 15px;
-      border-left: 3px solid #ffcc00;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    .steps-box b { color: #ffcc00; }
+    .feature-box span { color: #00ffcc; font-weight: bold; }
 
-    .footer {
-      background: linear-gradient(135deg, #0b2545, #134074);
+    .price-banner {
+      background: linear-gradient(135deg, #112233, #001a2e);
+      border: 1.5px solid #ffcc00;
       border-radius: 12px;
       padding: 12px;
       text-align: center;
-      border: 1px solid #ffcc00;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     }
-    .footer .pay-title { font-size: 12px; color: #fff; font-weight: bold; margin-bottom: 4px; }
-    .footer .phone { font-size: 18px; color: #00ffcc; font-weight: 900; letter-spacing: 1px; font-family: monospace; }
-    .footer .slogan { font-size: 10px; color: #ffcc00; margin-top: 5px; }
+    .price-tag {
+      font-size: 22px;
+      font-weight: 900;
+      color: #ffcc00;
+      text-shadow: 0 0 8px rgba(255,204,0,0.5);
+    }
+
+    .contact-box {
+      background: #000;
+      border: 1.5px solid #00ffcc;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+    .contact-num {
+      font-size: 18px;
+      font-weight: 900;
+      color: #00ffcc;
+      font-family: monospace;
+      letter-spacing: 1.5px;
+      margin-top: 2px;
+    }
   </style>
 </head>
 <body>
 
-  <div class="poster-card">
-    <div class="header">
-      <h1>🌊 DM MARINE GPS 🛰️</h1>
-      <p>ஆழ்கடல் மீனவர்களுக்கான அதிநவீன ஜிபிஎஸ் செயலி</p>
-    </div>
-
-    <div class="badge-offer">
-      ⭐ ஒரு முறை கட்டணம் ₹999 • வாழ்நாள் முழுவதும் இலவச அப்டேட்கள்! ⭐
+  <div class="story-card">
+    <div style="text-align: center;">
+      <div class="badge-top">⚡ நவீன ஆழ்கடல் செயலி</div>
+      <div class="main-title">🌊 DM MARINE GPS 🛰️</div>
+      <div class="subtitle">ஆழ்கடல் மீனவர்களுக்கான முழுமையான ஜிபிஎஸ்</div>
+      
+      <div class="offline-tag">
+        🌐❌ நடுக்கடலில் டவர் / நெட் இல்லாவிட்டாலும் 100% இயங்கும்!
+      </div>
     </div>
 
     <div class="feature-grid">
-      <div class="feature-item">
-        <div class="icon">🛰️</div>
-        <div class="title">ஆஃப்லைன் ஜிபிஎஸ்</div>
-        <div class="desc">டவர் / நெட் இல்லாவிட்டாலும் சாட்டிலைட் மூலம் வேகம் & அட்சரேகை இயங்கும்</div>
-      </div>
-      <div class="feature-item">
-        <div class="icon">⏱️</div>
-        <div class="title">15 நிமிடம் ஆட்டோ பார்</div>
-        <div class="desc">படகு நின்றால் 15 நிமிடத்தில் இடம் தானாகவே நம்பருடன் சேமிக்கப்படும்</div>
-      </div>
-      <div class="feature-item">
-        <div class="icon">🚀</div>
-        <div class="title">இலக்கு வழிகாட்டி</div>
-        <div class="desc">பழைய பார் இருக்கும் திசை மற்றும் கடல் மைல் தூரம் (NM) காட்டும்</div>
-      </div>
-      <div class="feature-item">
-        <div class="icon">🚨</div>
-        <div class="title">எல்லை & SOS அலாரம்</div>
-        <div class="desc">சர்வதேச எல்லை எச்சரிக்கை & Coast Guard (1554) SMS வசதி</div>
-      </div>
+      <div class="feature-box">🛰️ <span>லைவ் GPS & வேகம்</span></div>
+      <div class="feature-box">⏱️ <span>5 நிமி ஆட்டோ பார்</span></div>
+      <div class="feature-box">📖 <span>மீனவர் டைரி (Icons)</span></div>
+      <div class="feature-box">🕸️ <span>100 கூண்டுகள் பதிவு</span></div>
+      <div class="feature-box">🚨 <span>சர்வதேச எல்லை அலாரம்</span></div>
+      <div class="feature-box">🆘 <span>Coast Guard SOS (1554)</span></div>
+      <div class="feature-box">⛽ <span>டீசல் & மைலேஜ்</span></div>
+      <div class="feature-box">🎙️ <span>வாக்கி-டாக்கி & சோனார்</span></div>
     </div>
 
-    <div class="link-box">
-      <div class="label">📲 ஆப் நேரடி இணைய முகவரி:</div>
-      <div class="url">https://sdinesh2259-cyber.github.io/Marine--gps-app/</div>
+    <div class="price-banner">
+      <div style="font-size: 11px; color: #aaa; text-transform: uppercase;">தொடக்கச் சலுகைக் கட்டணம்</div>
+      <div class="price-tag">₹299 மட்டும் (30 நாட்கள்)</div>
     </div>
 
-    <div class="steps-box">
-      <b>📱 போனில் இன்ஸ்டால் செய்ய:</b><br>
-      லிங்கைத் திறந்து Chrome-ல் மேலே உள்ள <b>(⋮)</b> தொட்டு <b>"Install app"</b> கொடுக்கவும்.
-    </div>
-
-    <div class="footer">
-      <div class="pay-title">💳 GPay / PhonePe / WhatsApp எண்:</div>
-      <div class="phone">6381634610</div>
-      <div class="slogan">⚓ பாதுகாப்பான ஆழ்கடல் பயணம் • நிறைந்த மீன் வளம்! 🐟</div>
+    <div class="contact-box">
+      <div style="color: #fff; font-size: 11px;">💳 GPay / PhonePe & WhatsApp:</div>
+      <div class="contact-num">6381634610</div>
+      <div style="color: #888; font-size: 9px; margin-top: 4px;">Device ID அனுப்பி உடனே Pass Key பெறவும்! ⚓🐟</div>
     </div>
   </div>
 
