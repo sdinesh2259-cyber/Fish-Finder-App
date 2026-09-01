@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DM Marine GPS - Premium Promo Poster</title>
+  <title>DM Marine GPS - Poster</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; }
     body {
       background: #eadecc;
       display: flex;
@@ -15,7 +15,6 @@
       padding: 10px;
     }
 
-    /* பிரீமியம் சந்தன நிற போஸ்டர் கார்டு */
     .poster-card {
       width: 100%;
       max-width: 420px;
@@ -29,10 +28,9 @@
       text-align: center;
     }
 
-    /* Header Ribbon */
     .special-offer-ribbon {
       background: linear-gradient(90deg, #d90429, #ef233c);
-      color: #fff;
+      color: #ffffff;
       font-size: 11px;
       font-weight: 900;
       padding: 4px 14px;
@@ -45,17 +43,17 @@
     }
 
     .main-heading {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 900;
       color: #800f2f;
-      text-shadow: 1px 1px 0px #fff;
+      text-shadow: 1px 1px 0px #ffffff;
       line-height: 1.2;
     }
 
     .sub-banner {
       background: #1b4332;
       color: #74c69d;
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: bold;
       padding: 4px 10px;
       border-radius: 20px;
@@ -64,37 +62,33 @@
       border: 1px solid #2d6a4f;
     }
 
-    /* 3D App Mockup Grid */
     .mockup-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       margin-bottom: 12px;
     }
 
-    /* 3D Book / App Screen Look */
     .book-mockup {
-      width: 140px;
-      height: 185px;
+      width: 135px;
+      height: 175px;
       background: linear-gradient(135deg, #021a30 0%, #082d4f 100%);
       border: 2px solid #ffcc00;
-      border-left: 7px solid #111;
+      border-left: 6px solid #111111;
       border-radius: 6px 10px 10px 6px;
-      box-shadow: 6px 8px 18px rgba(0,0,0,0.4), inset 2px 0 5px rgba(255,255,255,0.2);
+      box-shadow: 4px 6px 15px rgba(0,0,0,0.35);
       padding: 8px 6px;
-      color: #fff;
+      color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative;
-      transform: perspective(400px) rotateY(-8deg);
+      text-align: center;
     }
 
     .book-mockup-2 {
-      transform: perspective(400px) rotateY(8deg);
       border-left: 2px solid #ffcc00;
-      border-right: 7px solid #111;
+      border-right: 6px solid #111111;
       border-radius: 10px 6px 6px 10px;
       background: linear-gradient(135deg, #0a2540 0%, #001220 100%);
     }
@@ -102,47 +96,47 @@
     .book-tag {
       font-size: 8px;
       background: #ffcc00;
-      color: #000;
+      color: #000000;
       font-weight: 900;
       padding: 2px 4px;
       border-radius: 3px;
+      display: inline-block;
     }
+
     .book-title {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 900;
       color: #00ffcc;
       margin-top: 4px;
       line-height: 1.2;
     }
 
-    /* Round Price Badge */
     .combo-price-badge {
-      width: 82px;
-      height: 82px;
+      width: 78px;
+      height: 78px;
       background: radial-gradient(circle, #ff0055, #9b0033);
       border: 3px solid #ffcc00;
       border-radius: 50%;
-      color: #fff;
+      color: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       flex-shrink: 0;
-      z-index: 2;
     }
-    .combo-price-badge .amt { font-size: 20px; font-weight: 900; color: #ffcc00; line-height: 1; }
+    .combo-price-badge .amt { font-size: 19px; font-weight: 900; color: #ffcc00; line-height: 1; }
     .combo-price-badge .sub { font-size: 7.5px; font-weight: bold; text-transform: uppercase; margin-top: 2px; }
 
-    /* Highlights Counter Grid */
     .stats-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 6px;
       margin-bottom: 10px;
     }
+
     .stat-box {
-      background: #fff;
+      background: #ffffff;
       border: 1.5px solid #d4af37;
       border-radius: 8px;
       padding: 6px;
@@ -152,10 +146,9 @@
       gap: 6px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.06);
     }
-    .stat-big-num { font-size: 20px; font-weight: 900; color: #800f2f; }
-    .stat-text { font-size: 9.5px; font-weight: bold; color: #333; text-align: left; line-height: 1.2; }
+    .stat-big-num { font-size: 19px; font-weight: 900; color: #800f2f; }
+    .stat-text { font-size: 9px; font-weight: bold; color: #333333; text-align: left; line-height: 1.2; }
 
-    /* App Link & Install Guide Box */
     .link-instruction-box {
       background: #ffffff;
       border: 2px dashed #0077b6;
@@ -166,7 +159,7 @@
     }
     .link-title { font-size: 10px; font-weight: 900; color: #0077b6; text-transform: uppercase; margin-bottom: 2px; }
     .link-url {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 900;
       color: #d90429;
       font-family: monospace;
@@ -177,23 +170,21 @@
       border: 1px solid #ffccd5;
       margin-bottom: 4px;
     }
-    .link-guide-text { font-size: 9.5px; font-weight: bold; color: #222; line-height: 1.35; }
+    .link-guide-text { font-size: 9.5px; font-weight: bold; color: #222222; line-height: 1.35; }
 
-    /* Checklist of Features */
     .checklist-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4px;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.75);
       border: 1px solid #c9b086;
       border-radius: 8px;
       padding: 6px 8px;
       margin-bottom: 10px;
       text-align: left;
     }
-    .check-item { font-size: 9.5px; font-weight: bold; color: #111; display: flex; align-items: center; gap: 4px; }
+    .check-item { font-size: 9.5px; font-weight: bold; color: #111111; display: flex; align-items: center; gap: 4px; }
 
-    /* WhatsApp & Order Box */
     .whatsapp-order-box {
       background: #e8f5e9;
       border: 1.5px solid #2e7d32;
@@ -205,42 +196,40 @@
       gap: 6px;
     }
     .wa-text { text-align: left; }
-    .wa-title { font-size: 10.5px; font-weight: bold; color: #1b5e20; }
-    .wa-phone { font-size: 15px; font-weight: 900; color: #000; font-family: monospace; }
-    .pay-tag { background: #ffcc00; color: #000; font-size: 9px; font-weight: 900; padding: 4px 6px; border-radius: 6px; }
+    .wa-title { font-size: 10px; font-weight: bold; color: #1b5e20; }
+    .wa-phone { font-size: 15px; font-weight: 900; color: #000000; font-family: monospace; }
+    .pay-tag { background: #ffcc00; color: #000000; font-size: 8.5px; font-weight: 900; padding: 4px 6px; border-radius: 6px; text-align: center; }
   </style>
 </head>
 <body>
 
   <div class="poster-card">
-    <div class="special-offer-ribbon">⭐ SPECIAL INTRO OFFER ⭐</div>
+    <div class="special-offer-ribbon">SPECIAL INTRO OFFER</div>
     <div class="main-heading">இனி கடலில் உங்கள் போனே<br>நவீன கடல் ஜிபிஎஸ்!</div>
-    <div class="sub-banner">🌊 நடுக்கடலில் டவர் / நெட் இல்லாவிட்டாலும் 100% துல்லியம்! 🛰️</div>
+    <div class="sub-banner">நடுக்கடலில் டவர் / நெட் இல்லாவிட்டாலும் 100% துல்லியம்!</div>
 
-    <!-- 3D Mockup Display -->
     <div class="mockup-container">
       <div class="book-mockup">
         <span class="book-tag">ஆஃப்லைன் GPS</span>
-        <div style="font-size: 24px; margin: 4px 0;">🛰️🧭</div>
+        <div style="font-size: 22px; margin: 4px 0;">🛰️🧭</div>
         <div class="book-title">DM MARINE<br>GPS LIVE</div>
-        <div style="font-size: 8px; color: #ffcc00;">அட்சரேகை • வேகம் • திசை</div>
+        <div style="font-size: 8px; color: #ffcc00;">அட்சரேகை • வேகம்</div>
       </div>
 
       <div class="combo-price-badge">
         <div class="amt">₹299</div>
         <div class="sub">மட்டும்</div>
-        <div style="font-size: 7px; color:#fff;">PASS KEY</div>
+        <div style="font-size: 7px; color:#ffffff;">PASS KEY</div>
       </div>
 
       <div class="book-mockup book-mockup-2">
         <span class="book-tag" style="background:#00ffcc;">மீனவர் டூல்ஸ்</span>
-        <div style="font-size: 24px; margin: 4px 0;">🪨🕸️</div>
-        <div class="book-title">பாறை & கூண்டு<br>டைரி மேலாண்மை</div>
-        <div style="font-size: 8px; color: #ffcc00;">5 நிமி ஆட்டோ பதிவு</div>
+        <div style="font-size: 22px; margin: 4px 0;">🪨🕸️</div>
+        <div class="book-title">பாறை &amp; கூண்டு<br>டைரி பதிவு</div>
+        <div style="font-size: 8px; color: #ffcc00;">5 நிமி ஆட்டோ சேமிப்பு</div>
       </div>
     </div>
 
-    <!-- Counters -->
     <div class="stats-row">
       <div class="stat-box">
         <div class="stat-big-num">100%</div>
@@ -248,34 +237,31 @@
       </div>
       <div class="stat-box">
         <div class="stat-big-num">100</div>
-        <div class="stat-text">கூண்டுகள் & பாறைகள்<br>துல்லியப் பதிவு!</div>
+        <div class="stat-text">கூண்டுகள் &amp; பாறைகள்<br>துல்லியப் பதிவு!</div>
       </div>
     </div>
 
-    <!-- Link & Instruction Guide -->
     <div class="link-instruction-box">
-      <div class="link-title">📲 ஆப் நேரடி முகவரி (Website Link):</div>
+      <div class="link-title">ஆப் நேரடி முகவரி (Website Link):</div>
       <div class="link-url">https://sdinesh2259-cyber.github.io/Marine--gps-app/</div>
       <div class="link-guide-text">
-        👉 இந்த லிங்கை <b>Chrome-ல் திறந்து</b>, (⋮) 3 புள்ளிகளைத் தொட்டு <b>"Install app"</b> அல்லது <b>"Add to Home screen"</b> கொடுத்து, திரையில் தெரியும் <b>Device ID</b>-ஐ அனுப்பி <b>₹299 செலுத்தி Pass Key-ஐப் பெற்றுக் கொள்ளவும்!</b>
+        இந்த லிங்கை <b>Chrome-ல் திறந்து</b>, (⋮) 3 புள்ளிகளைத் தொட்டு <b>"Install app"</b> கொடுத்து, திரையில் தெரியும் <b>Device ID</b>-ஐ அனுப்பி <b>₹299 செலுத்தி Pass Key-ஐப் பெற்றுக் கொள்ளவும்!</b>
       </div>
     </div>
 
-    <!-- Highlights Checklist -->
     <div class="checklist-grid">
-      <div class="check-item">✅ 5 நிமி ஆட்டோ பார் சேமிப்பு</div>
-      <div class="check-item">✅ சர்வதேச எல்லை அலாரம்</div>
-      <div class="check-item">✅ Coast Guard (1554) SOS</div>
-      <div class="check-item">✅ டீசல் & மைலேஜ் கணக்கீடு</div>
-      <div class="check-item">✅ சின்னங்களுடன் கூடிய டைரி</div>
-      <div class="check-item">✅ சோனார் & வாக்கி-டாக்கி</div>
+      <div class="check-item">✔ 5 நிமி ஆட்டோ பார் சேமிப்பு</div>
+      <div class="check-item">✔ சர்வதேச எல்லை அலாரம்</div>
+      <div class="check-item">✔ Coast Guard (1554) SOS</div>
+      <div class="check-item">✔ டீசல் &amp; மைலேஜ் கணக்கீடு</div>
+      <div class="check-item">✔ சின்னங்களுடன் கூடிய டைரி</div>
+      <div class="check-item">✔ சோனார் &amp; வாக்கி-டாக்கி</div>
     </div>
 
-    <!-- WhatsApp / Payment Box -->
     <div class="whatsapp-order-box">
-      <div style="font-size: 24px;">💬</div>
+      <div style="font-size: 22px;">💬</div>
       <div class="wa-text">
-        <div class="wa-title">GPay / PhonePe & WhatsApp:</div>
+        <div class="wa-title">GPay / PhonePe &amp; WhatsApp:</div>
         <div class="wa-phone">6381634610</div>
       </div>
       <div class="pay-tag">₹299 செலுத்தி<br>KEY பெறுக 🔑</div>
